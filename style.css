@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: white;
+    color: #282c3f;
+}
+
+/* HEADER */
+.hero {
+    background: #ff5200;
+    min-height: 660px;
+    padding-bottom: 45px;
+}
+
+.navbar {
+    max-width: 1220px;
+    margin: auto;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.app {
+    border: 1px solid white;
+    padding: 15px 20px;
+    border-radius: 12px;
+}
+
+.signin {
+    background: black;
+    padding: 16px 35px;
+    border-radius: 15px;
+}
+
+/* SEARCH BAR */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 150px auto 55px;
+}
+
+.search-container input {
+    width: 280px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.search-container input:last-child {
+    width: 435px;
+}
+
+/* BANNERS */
+.banner-container {
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    gap: 45px;
+}
+
+.banner {
+    background: white;
+    width: 50%;
+    height: 320px;
+    border-radius: 30px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-text {
+    position: relative;
+    z-index: 2;
+}
+
+.banner h1 {
+    font-size: 32px;
+    color: #34343b;
+}
+
+.banner p {
+    font-size: 21px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.banner h4 {
+    color: #e85b19;
+    background: #fff0e9;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.banner img {
+    position: absolute;
+    width: 48%;
+    height: 70%;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    border-radius: 50% 0 0 0;
+}
+
+.banner button {
+    background: #ff5200;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 90px;
+    cursor: pointer;
+}
+
+/* COMMON SECTION */
+.section {
+    max-width: 1220px;
+    margin: auto;
+    padding: 65px 0 20px;
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* FOOD CATEGORIES */
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
+}
+
+.category {
+    text-align: center;
+}
+
+.category img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.category h3 {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* RESTAURANTS */
+.restaurant-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.restaurant {
+    overflow: hidden;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.restaurant:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.restaurant h3 {
+    margin-top: 12px;
+    font-size: 19px;
+}
+
+.restaurant p {
+    color: #686b78;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    background: #080808;
+    color: white;
+    padding: 45px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+footer p {
+    margin-top: 15px;
+    color: #ccc;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .banner-container {
+        margin: 0 20px;
+        gap: 15px;
+    }
+
+    .category-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .restaurant-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+    }
+
+    .navbar {
+        height: 80px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .search-container {
+        flex-direction: column;
+        margin: 60px 20px 35px;
+    }
+
+    .search-container input,
+    .search-container input:last-child {
+        width: 100%;
+    }
+
+    .banner-container {
+        flex-direction: column;
+    }
+
+    .banner {
+        width: 100%;
+        height: 270px;
+    }
+
+    .banner h1 {
+        font-size: 25px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    .banner button {
+        margin-top: 65px;
+    }
+
+    .category-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px 10px;
+    }
+
+    .category img {
+        height: 75px;
+    }
+
+    .restaurant-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .restaurant img {
+        height: 130px;
+    }
+
+    .section {
+        padding: 45px 15px 15px;
+    }
+}
